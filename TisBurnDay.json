@@ -1,0 +1,15 @@
+{
+  "username": "BurnDayBot",
+  "avatar_url": "https://i.imgur.com/rJyUk4d.png",
+  "embeds": [
+    {
+      "image": {
+        "url": "https://apps.dentoncounty.gov/website/publicburncontrol/Images/BurndayYes2.jpg"
+      },
+      "footer": {
+        "text": "It's a burn day!",
+        "icon_url": "https://i.imgur.com/rJyUk4d.png"
+      }
+    }
+  ]
+}
