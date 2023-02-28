@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
+
+pushd ~/Documents/DentonBurnDayBot/
 
 url="https://www.dentoncountyesd1.gov/wp-content/uploads/scripts/burnday.php"
 #TODO: Use the "It's a burn day" string instead, so no false positives. Have to wait for a burn day to make sure that's the right text.
@@ -21,3 +23,5 @@ if [[ $response == *"$burn_day_string"* ]]; then
 else
 	echo "Not a burn day. No message sent."
 fi
+
+popd

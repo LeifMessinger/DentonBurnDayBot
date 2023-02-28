@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/bash -x
+
+pushd ~/Documents/DentonBurnDayBot/
 
 url="https://www.dentoncountyesd1.gov/wp-content/uploads/scripts/burnday.php"
 #TODO: Use the "It's a burn day" string instead, so no false positives. Have to wait for a burn day to make sure that's the right text.
@@ -27,3 +29,5 @@ else
 	# Send a POST request with the JSON file
 	curl -X POST -H "Content-Type: application/json" -d "@$notBurnDayJSON" "$post_url"
 fi
+
+popd
