@@ -2,7 +2,7 @@
 
 pushd ~/Documents/UNTPublicSurplusBot/
 
-url="https://www.publicsurplus.com/sms/unt,tx/browse/search?posting=y&slth=&page=0&sortBy=&keyWord=&catId=-1&endHours=-1&startHours=24&lowerPrice=0&higherPrice=0&milesLocation=-1&zipCode=&region=unt%2Ctx&search=Search"
+url="https://www.publicsurplus.com/sms/unt,tx/browse/search?posting=y&endHours=-1&startHours=25&highlight=Y&region=unt,tx"
 
 no_surplus_string="No auctions found"
 #This is a file where your webhook endpoint URL is
