@@ -10,7 +10,6 @@ url="https://apps.dentoncounty.gov/website/publicburncontrol/Default"
 #burn_day_string="is a burn day"
 #New strategy
 burn_day_string="Images/BurndayYes2.jpg"
-json_path=${1:-TisBurnDay.json}
 
 #This is a file where your webhook endpoint URL is
 #The file might not be allowed to have a newline in it, so use printf "<URL>" >> webhookURL.txt
@@ -29,10 +28,14 @@ if grep "$burn_day_string" /tmp/burnDayScrape.txt; then
 	echo "It's a burn day!"
 	date
 	# Send a POST request with the JSON file
-	curl -X POST -H "Content-Type: application/json" -d "@$json_path" "$post_url"
+	#curl -X POST -H "Content-Type: application/json" -d "@$tisBurnDayJSON" "$post_url"
 else
-	echo "Not a burn day. No message sent."
+	echo "It's not a burn day. :("
 	date
+	# Send a POST request with the JSON file
+	#curl -X POST -H "Content-Type: application/json" -d "@$notBurnDayJSON" "$post_url"
 fi
+
+rm /tmp/burnDayScrape.txt
 
 popd
